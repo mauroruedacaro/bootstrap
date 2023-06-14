@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+/* prueba comentario */
+body {
+	color: #4d5565;
+	background-color: #eef2f6;
+	font-family: "Poppins", Sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* img { */
+.img {
+	width: 150px;
+}
+/* Prueba para saber como modificar imágenes con estilos diferentes
+.img1 {
+	width: 300px;
+} */
+
+a {
+	/* quita estilos por defecto */
+	text-decoration: none;
+	color: inherit;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+
+li {
+	/* quita estilos por defecto */
+	list-style: none;
+}
+
+#cta {
+	/* quita estilos por defecto */
+	border: none;
+	font-size: inherit;
+	/* agregamos estilos propios */
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #51b2d4;
+	padding: 1rem 2rem;
+}
+
+/* Efectos Hover (Pseudoclase) */
+a:hover {
+	background-color: rgb(81, 178, 212, 0.1);
+	color: #65d451;
+}
+
+#cta:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+/* Acerca de FLEXBOX */
+nav {
+	background-color: #3f52ff;
+	color: #eef2f6;
+	display: flex;
+	justify-content: space-around;
+	padding: 1.7rem 0;
+	align-items: center;
+}
+
+.navbar--menu {
+	display: flex;
+	gap: 1.5rem;
+}
