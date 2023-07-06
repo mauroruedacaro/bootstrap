@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">;
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">;
+    <link rel="stylesheet" href="cajero.css">
+    <title>CAJERO-AUTOMATICO</title>
+</head>
+<body>
+    <!-- Crear Forma login -->
+    <div id="container">
+        <div id="contenedorcentrado">
+            <div id="login">
+                <form id="loginform">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">usuario</label>
+                        <input type="text" class="form-control" id="userName" aria-describedby="userHelp">
+                        <div id="userHelp" class="form-text">Nunca comporta su usuario con otra persona.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="userPassword">
+                    </div>
+                    <!-- <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="checkBox">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary" id = "check-Btn">Login</button>
+                    <div id = "msgLogin" class="alert alert-secondary" role="alert">Estado</div>
+                </form>
+                
+            </div>
+            
+            <div id="derecho">
+                <div class="titulo">
+                    Digite Tipo de Transacción
+                </div>
+                <hr>
+                <div class="pie-form">
+                    <a href="#">¿Perdiste tu contraseña?</a>
+                    <a href="#">¿No tienes Cuenta? Registrate</a>
+                    <hr>
+                    <a href="#">« Volver</a>
+                </div>
+        </div>
+        <script src="./cajero.js"></script>
+    </div> 
+</body>
+</html>

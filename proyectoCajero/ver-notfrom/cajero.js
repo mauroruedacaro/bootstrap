@@ -42,32 +42,46 @@ function funCalculate (mountVal,option)
     return (stage);
 }
 
-// window.location = 'nombre dela pagina';
-let message = document.querySelector ('#msgLogin');
-const checkBtn = document.querySelector ('#check-Btn');
-checkBtn.addEventListener('click', function () {
-    for (i=0; i<3;i++)
+// funtion to select count
+for (i=0; i<3;i++)
+{
+    let option = prompt (`${i+1} Cuenta de ${arrayNameCount[i]} Desea ver esta cuenta?` );
+    console.log (`${i+1} Cuenta de ${arrayNameCount[i]} ` );
+    if (option == 's')
     {
-        const inputName = document.getElementById ('userName').value;
-        const inputPass = document.getElementById ('userPassword').value;
-        alert (`Este es el ingreso --> ${inputName} ---> Password --> ${inputPass}`);
-        if (arrayNameCount[i] == inputName && arrayPwd[i] == inputPass ) 
+        index = i;
+        break;
+    }
+    else 
+    {
+        if (option == 'n')
         {
-            index = i;
-            message.textContent=  'usuario valido  🔒';
-            message.classList = 'alert  alert-success';
-            countTry = 1;
+            index = 3;
+        }
+        else
+        {
+            document.write ('opcion invalida');
             break;
         }
-        else 
-        {
-            message.textContent=  'usuario no existe 🔓  ';
-            message.classList = 'alert  alert-success';
-        }
     }
+}
+if (index < 3) 
+{
+    document.write (`ESTAS EN LA CUENTA de ${arrayNameCount[index]} <br>`);
+    do 
+    {
+        passwd = prompt (`Ingrese la contraseña`);
+        countTry=countTry+1;
+        if (countTry > 5)
+        {
+            document.write (`Maximo de intentos ${countTry}`);
+            countTry = 0;
+            break;
+        }
+    } while (passwd!=arrayPwd[index]);
+}
 if (countTry > 0)
 {
-    // window.location.href = "transaction.html";
     option = prompt ('Digite tipo transacción: (CO --> Consignar || RE --> Retirar || SA --> Saldo');
     mountVal = prompt ('Ingrese el valor');
     mountVal = parseInt (mountVal);
@@ -86,4 +100,3 @@ if (countTry > 0)
             break;
     }
 }
-})
